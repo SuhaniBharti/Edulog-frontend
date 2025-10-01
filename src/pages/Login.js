@@ -156,9 +156,10 @@ export default function Login() {
             Login
           </button>
         </form>
-        <p style={{ textAlign: "center", marginTop: "1rem", fontSize: "0.9rem" }}>
-          Don't have an account? <a href="/signup" style={{ color: "#fff", textDecoration: "underline" }}>Sign up</a>
-        </p>
+        
+          Don't have an account? <button type="button" onClick={()=>navigate("/signup")} 
+          style={{ textAlign: "center", marginTop: "1rem", fontSize: "0.9rem" }}>Signup</button>
+       
       </div>
     </div>
   );
