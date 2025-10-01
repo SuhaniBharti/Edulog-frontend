@@ -346,7 +346,7 @@ const Routine = ({ onSubjectAdded }) => {
         return;
       }
 
-      const res = await fetch("http://localhost:5000/api/subjects", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/subjects`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

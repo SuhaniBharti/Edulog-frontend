@@ -53,7 +53,7 @@ const SubjectList = () => {
     }
 
     // ✅ Fetch subjects for this user
-    fetch(`http://localhost:5000/api/subjects/${user._id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${user._id}`)
       .then((res) => res.json())
       .then((data) => setSubjects(data))
       .catch((err) => console.error("Error fetching subjects:", err));
@@ -62,7 +62,7 @@ const SubjectList = () => {
   if (!window.confirm("Are you sure you want to delete this subject?")) return;
 
   try {
-    const res = await fetch(`http://localhost:5000/api/subjects/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${id}`, {
       method: "DELETE",
     });
 

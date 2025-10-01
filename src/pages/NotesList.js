@@ -115,7 +115,7 @@ const NotesList = () => {
     }
 
     // ✅ Fetch notes for this user
-    fetch(`http://localhost:5000/api/notes/${user._id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/notes/${user._id}`)
       .then((res) => res.json())
       .then((data) => setNotes(data))
       .catch((err) => console.error("Error fetching notes:", err));
@@ -125,7 +125,7 @@ const NotesList = () => {
   if (!window.confirm("Are you sure you want to delete this note?")) return;
 
   try {
-    const res = await fetch(`http://localhost:5000/api/notes/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/notes/${id}`, {
       method: "DELETE",
     });
 

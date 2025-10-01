@@ -9,7 +9,7 @@ const SubjectCalendar = () => {
   const [subjectName, setSubjectName] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/subjects/${subjectId}/dates`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}/dates`)
       .then(res => res.json())
       .then(data => {
         setDates(data.map(d => new Date(d)));
@@ -17,7 +17,7 @@ const SubjectCalendar = () => {
       .catch(err => console.error("Error fetching absent dates:", err));
 
     // optional: fetch subject details too
-    fetch(`http://localhost:5000/api/subjects/${subjectId}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}`)
       .then(res => res.json())
       .then(data => setSubjectName(data.Sname));
   }, [subjectId]);
