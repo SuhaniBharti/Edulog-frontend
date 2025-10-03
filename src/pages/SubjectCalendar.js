@@ -12,14 +12,23 @@ const SubjectCalendar = () => {
     fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}/dates`)
       .then(res => res.json())
       .then(data => {
+         console.log("Fetched dates:", data);
         setDates(data.map(d => new Date(d)));
       })
       .catch(err => console.error("Error fetching absent dates:", err));
 
     // optional: fetch subject details too
-    fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}`)
-      .then(res => res.json())
-      .then(data => setSubjectName(data.Sname));
+    // fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}`)
+    //   .then(res => res.json())
+    //   .then(data => setSubjectName(data.subjects?.Sname));
+    fetch(`${process.env.REACT_APP_API_URL}/api/subject/${subjectId}`)
+  .then(res => res.json())
+  .then(data => {
+    console.log("Fetched subject:", data); // 👀 check shape
+    setSubjectName(data.Sname  || "Unknown Subject");
+  })
+  .catch(err => console.error("Error fetching subject:", err));
+
   }, [subjectId]);
 
   const tileClassName = ({ date, view }) => {
