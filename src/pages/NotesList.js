@@ -170,7 +170,8 @@ const NotesList = () => {
                 <h5 className="card-title">{note.title}</h5>
                 <p>{note.date}</p>
                 <p className="card-text">{note.description}</p>
-               
+               <div>
+
                 <button
   className="btn btn-danger mt-2"
   onClick={() => handleDelete(note._id)}
@@ -191,7 +192,7 @@ const NotesList = () => {
 >
   ✏️ Edit
 </button>
-
+</div>
 
               </div>
             </div>
