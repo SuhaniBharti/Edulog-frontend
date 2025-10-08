@@ -22,7 +22,7 @@ const EditNote = () => {
     }
 
     // Fetch the existing note
-    fetch(`${process.env.REACT_APP_API_URL}/api/notes/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/notes/note/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched note:", data); 
