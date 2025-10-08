@@ -178,7 +178,21 @@ const NotesList = () => {
   Delete
 </button>
 
-                <button>Update</button>
+                <button
+  onClick={() => navigate(`/edit/${note._id}`)}
+  style={{
+    marginLeft: "1rem",
+    backgroundColor: "#ffc107",
+    border: "none",
+    padding: "0.5rem 1rem",
+    borderRadius: "5px",
+    cursor: "pointer"
+  }}
+>
+  ✏️ Edit
+</button>
+
+
               </div>
             </div>
           </div>

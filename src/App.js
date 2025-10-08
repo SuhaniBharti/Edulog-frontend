@@ -74,7 +74,7 @@ import SubjectList from "./pages/Attendance/SubjectList";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import SubjectCalendar from "./pages/SubjectCalendar";
-
+import EditNote from "./pages/UpdateNote";
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [subjects, setSubjects] = useState([]);
@@ -126,6 +126,8 @@ useEffect(() => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
           <Route path="/calendar/:subjectId" element={<SubjectCalendar />} />
+          <Route path="/edit/:id" element={<EditNote />} />
+
       </Routes>
     </Router>
     </div>
