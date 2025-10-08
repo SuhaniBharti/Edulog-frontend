@@ -1,4 +1,5 @@
 // src/pages/EditNote.js
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -24,13 +25,14 @@ const EditNote = () => {
     fetch(`${process.env.REACT_APP_API_URL}/api/notes/${id}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log("Fetched note:", data); 
         setFormData({
           title: data.title,
           date: data.date ? data.date.slice(0, 10) : "",
           description: data.description
         });
       })
-      .catch((err) => console.error("Error fetching note:", err));
+    .catch((err) => console.error("Error fetching note:", err));
   }, [id, navigate]);
 
   const handleChange = (e) => {
