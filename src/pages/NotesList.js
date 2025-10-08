@@ -170,7 +170,7 @@ const NotesList = () => {
                 <h5 className="card-title">{note.title}</h5>
                 <p>{note.date}</p>
                 <p className="card-text">{note.description}</p>
-               <div>
+              <div style={{ display: "flex", gap: "1rem", marginTop: "0.5rem" }}>
 
                 <button
   className="btn btn-danger mt-2"
