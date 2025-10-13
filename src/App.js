@@ -75,10 +75,11 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import SubjectCalendar from "./pages/SubjectCalendar";
 import EditNote from "./pages/UpdateNote";
+import Chatbot from "./pages/Chatbot/ChatBot";
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [subjects, setSubjects] = useState([]);
-
+  const user = JSON.parse(localStorage.getItem("user"));
   // Fetch notes
   useEffect(() => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -127,6 +128,7 @@ useEffect(() => {
         <Route path="/login" element={<Login />} />
           <Route path="/calendar/:subjectId" element={<SubjectCalendar />} />
           <Route path="/edit/:id" element={<EditNote />} />
+          <Route path="/chatbot" element={<Chatbot userId={user._id}/>} />
 
       </Routes>
     </Router>

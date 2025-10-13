@@ -8,7 +8,7 @@ const SubjectCalendar = () => {
   const [dates, setDates] = useState([]);
   const [subjectName, setSubjectName] = useState("");
 
-  useEffect(() => {
+   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}/dates`)
       .then(res => res.json())
       .then(data => {
