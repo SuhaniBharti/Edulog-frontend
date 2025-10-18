@@ -17,10 +17,7 @@ const SubjectCalendar = () => {
       })
       .catch(err => console.error("Error fetching absent dates:", err));
 
-    // optional: fetch subject details too
-    // fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${subjectId}`)
-    //   .then(res => res.json())
-    //   .then(data => setSubjectName(data.subjects?.Sname));
+ 
     fetch(`${process.env.REACT_APP_API_URL}/api/subject/${subjectId}`)
   .then(res => res.json())
   .then(data => {

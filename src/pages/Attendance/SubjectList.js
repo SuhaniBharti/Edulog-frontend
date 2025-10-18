@@ -1,40 +1,4 @@
-// import React from 'react';
-// import Navbar from '../../components/Navbar';
 
-// const SubjectList = ({ subjects }) => {
-//   return (
-//     <>
-//       {/* <Navbar /> */}
-//       <div style={{ padding: "9rem" }}>
-//         <h2>Subject List</h2>
-//         {subjects.length === 0 ? (
-//           <p>No subjects yet. Add some!</p>
-//         ) : (
-//           <ul style={{ listStyle: "none", padding: 0 }}>
-//             {subjects.map((subject) => (
-//               <li
-//                 key={subject._id}
-//                 style={{
-//                   border: "1px solid #ddd",
-//                   marginBottom: "1rem",
-//                   padding: "1rem",
-//                   borderRadius: "8px"
-//                 }}
-//               >
-//                 <h3>{subject.Sname}</h3>
-//                 <p>
-//                   <strong>Absent:</strong> {subject.absent}
-//                 </p>
-//               </li>
-//             ))}
-//           </ul>
-//         )}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default SubjectList;
 
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";

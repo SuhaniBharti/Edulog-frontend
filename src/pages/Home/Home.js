@@ -1,8 +1,8 @@
 
 import React from 'react';
-import bgImage from "../../assets/bgimage.jpg"; // ← make sure this exists
+import bgImage from "../../assets/bgimage.jpg"; 
 import "./Home.css";
-// import { Navigate } from 'react-router-dom';
+
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
