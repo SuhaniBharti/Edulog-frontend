@@ -119,7 +119,7 @@ const NotesList = () => {
               Incomplete Tasks
             </li>
           </ul>
-        </div>
+        </div> 
 
         {/* Notes Section */}
         <div style={{ flex: 1 }}>

@@ -17,7 +17,7 @@ export default function Login() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
-    const data = await res.json();
+    const data = await res.json();//res is response object swnt by fetch()API it is built-in browser object in data we donot have res.ok doinf res.
     if (res.ok) {
       localStorage.setItem("user", JSON.stringify(data.user));
       alert("Login successful!");

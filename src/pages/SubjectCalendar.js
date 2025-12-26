@@ -21,7 +21,7 @@ const SubjectCalendar = () => {
     fetch(`${process.env.REACT_APP_API_URL}/api/subject/${subjectId}`)
   .then(res => res.json())
   .then(data => {
-    console.log("Fetched subject:", data); // 👀 check shape
+    console.log("Fetched subject:", data); 
     setSubjectName(data.Sname  || "Unknown Subject");
   })
   .catch(err => console.error("Error fetching subject:", err));
