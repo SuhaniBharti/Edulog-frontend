@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -16,12 +14,13 @@ const SubjectList = () => {
       return;
     }
 
-    // ✅ Fetch subjects for this user
+    //  Fetch subjects for this user
     fetch(`${process.env.REACT_APP_API_URL}/api/subjects/${user._id}`)
       .then((res) => res.json())
       .then((data) => setSubjects(data))
       .catch((err) => console.error("Error fetching subjects:", err));
   }, [navigate]);
+  
  const handleDelete = async (id) => {
   if (!window.confirm("Are you sure you want to delete this subject?")) return;
 

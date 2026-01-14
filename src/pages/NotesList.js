@@ -46,9 +46,9 @@ const NotesList = () => {
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}/api/notes/${note._id}/complete`,
         {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ completed: !note.completed }),
+          method:"PATCH",
+          headers:{ "Content-Type": "application/json" },
+          body:JSON.stringify({ completed: !note.completed }),
         }
       );
       const updatedNote = await res.json();
@@ -176,7 +176,7 @@ const NotesList = () => {
                               minWidth: "100px",
                             }}
                           >
-                            ✏️ Edit
+                            Edit
                           </button>
 
                           <button

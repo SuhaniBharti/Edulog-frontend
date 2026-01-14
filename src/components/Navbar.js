@@ -8,7 +8,11 @@ const Navbar = () => {
 
   const lastScrollY = useRef(0);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    
+   
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,15 +48,18 @@ const Navbar = () => {
 
 
     {/* Hamburger (Mobile only, controlled via CSS media query) */}
+  
     <button className="hamburger" onClick={toggleMenu} >
       <span className="bar"></span>
       <span className="bar"></span>
       <span className="bar"></span>
     </button>
+     
+    
 </nav>
     {/* Mobile Menu */}
     {menuOpen && (
-      <ul className="nav-links w-100">
+      <ul className="nav-links w-100 ">
         <li><Link to="/user" className="custom-nav-btn">Home</Link></li>
         <li><Link to="/add" className="custom-nav-btn">Add Note</Link></li>
         <li><Link to="/list" className="custom-nav-btn">NoteList</Link></li>

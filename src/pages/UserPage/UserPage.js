@@ -31,21 +31,43 @@ const Home = () => {
           <p className="subtitle">
             Your personal companion to keep track of attendance and stay on top of your routine.
           </p>
-          <button className="get-started">Get started</button>
+          {/* <button className="get-started">Get started</button> */}
         </div>
 
         {/* Chatbot footer button */}
+        {!showChatbot && 
         <div className="chatbot-footer">
           <button
             className="chatbot-button"
             onClick={() => setShowChatbot(!showChatbot)}
           >
-            💬 Chatbot
+             Chatbot
           </button>
         </div>
+        }
 
         {/* Render chatbot only when showChatbot is true */}
-        {showChatbot && <Chatbot userId={user?._id} />}
+        {/* {showChatbot && 
+        <div>
+        <button
+        onClick={()=>setShowChatbot(!showChatbot)}>close</button>
+        <Chatbot userId={user?._id} />
+        </div>
+        } */}
+
+        {showChatbot && (
+  <div className="chatbot-container">
+    <button
+      className="chatbot-close"
+      onClick={() => setShowChatbot(false)}
+    >
+      ✖
+    </button>
+
+    <Chatbot userId={user?._id} />
+  </div>
+)}
+
       </div>
     </>
   );

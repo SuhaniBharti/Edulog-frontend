@@ -63,10 +63,9 @@ useEffect(() => {
         <Route path="/subjects" element={<Routine onSubjectAdded={handleSubjectAdded} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-          <Route path="/calendar/:subjectId" element={<SubjectCalendar />} />
-          <Route path="/edit/:id" element={<EditNote />} />
-          <Route path="/chatbot" element={<Chatbot userId={user._id}/>} />
-
+        <Route path="/calendar/:subjectId" element={<SubjectCalendar />} />
+        <Route path="/edit/:id" element={<EditNote />} />
+        <Route path="/chatbot" element={<Chatbot userId={user._id}/>} />
       </Routes>
     </Router>
     </div>

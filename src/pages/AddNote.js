@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +10,7 @@ const AddNote = ({ onNoteAdded }) => {
   });
   const navigate = useNavigate();
 
-  // 🔹 Run once when the component loads
+  //  Run once when the component loads
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) {
