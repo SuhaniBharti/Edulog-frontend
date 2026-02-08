@@ -88,7 +88,7 @@ const Home = () => {
   const [user, setUser] = useState(null);
   const [showChatbot, setShowChatbot] = useState(false);
 
-  // ✅ Check session + get logged-in user
+  //  Check session + get logged-in user
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/auth/me`, {
       credentials: "include",
@@ -144,7 +144,7 @@ const Home = () => {
               ✖
             </button>
 
-            {/* ✅ use user.id, NOT user._id */}
+            {/*  use user.id, NOT user._id */}
             <Chatbot userId={user?.id} />
           </div>
         )}
