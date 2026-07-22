@@ -26,7 +26,7 @@ useEffect(() => {
     .then(res => res.ok ? res.json() : null)
     .then(data => setUser(data));
 }, []);
-
+console.log("user:"+user);
 
   const handleNoteAdded = (newNote) => {
     setNotes((prev) => [...prev, newNote]);

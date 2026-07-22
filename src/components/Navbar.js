@@ -10,8 +10,6 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    
-   
   }
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const Navbar = () => {
     {/* Brand + Links (Desktop) */}
   <nav className="align-items-center flex-row" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
   <div className="brand-text">EduLog</div>
-  <ul className="nav-links-1">
+    <ul className="nav-links-1">
     <li><Link to="/user" className="custom-nav-btn">Home</Link></li>
     <li><Link to="/add" className="custom-nav-btn">Add Note</Link></li>
     <li><Link to="/list" className="custom-nav-btn">NoteList</Link></li>

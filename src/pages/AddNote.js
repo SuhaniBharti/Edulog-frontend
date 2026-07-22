@@ -1,7 +1,3 @@
-
-
-
-
 // session
 
 import React, { useState } from "react";
@@ -16,14 +12,6 @@ const AddNote = ({ onNoteAdded }) => {
   });
   const navigate = useNavigate();
 
-  //  Run once when the component loads
-  // useEffect(() => {
-  //   const user = JSON.parse(localStorage.getItem("user"));
-  //   if (!user) {
-  //     alert("You must be logged in.");
-  //     navigate("/login");
-  //   }
-  // }, [navigate]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -39,8 +27,8 @@ const AddNote = ({ onNoteAdded }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: "include", // ✅ send session cookie
-      body: JSON.stringify(formData), // ✅ no userId
+      credentials: "include", //  send session cookie
+      body: JSON.stringify(formData), //  no userId
     });
 
     if (res.status === 401) {
